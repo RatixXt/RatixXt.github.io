@@ -18,7 +18,10 @@
     crossorigin="anonymous">
 </script> 
 <!-- <script type="text/javascript" src="main.js"></script> -->
-<script>function showMessage() {
+<script>
+  var text1="Собачка1";
+  var text2="Собачка2";
+  function showMessage() {
   alert( 'Привет всем присутствующим!' );
 }
 
@@ -28,5 +31,7 @@ function changepic() {
   $("#my_image").attr("src", src);
 }</script>
 <img id="my_image" src="/img/first.jpg"/>
+
+<p>text1</p>
 
 <input value="Нажми меня" onclick="changepic()" type="button"/>
