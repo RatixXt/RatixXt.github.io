@@ -10,7 +10,7 @@
     <!--Основное содержимое страницы-->
     <p>Тестовая страница</p>
     <img id="my_image" src="/img/first.jpg"/>
-    <p>Описание - <div id="text"></div></p>
+    <p id="text">Собачка1</p>
     <input value="Нажми меня" onclick="changepic()" type="button"/>
   </body>
   <script
@@ -20,23 +20,18 @@
 </script> 
 <!-- <script type="text/javascript" src="main.js"></script> -->
 <script>
-  var text = "Собачка1";
-  document.getElementById("text").innerHTML = text;
-  function showMessage() {
-  alert( 'Привет всем присутствующим!' );
-}
-
 function changepic() {
   if ($("#my_image").attr("src") == "/img/first.jpg") {
     var src = "/img/second.jpg";
-    text = "Собачка2";
+    $("#text").text("Cобачка2");
   }
   else
   {
     var src = "/img/first.jpg";
-    text = "Собачка1";
+    $("#text").text("Cобачка1");
   }
   $("#my_image").attr("src", src);
 }</script>
+  
 </html>
 
