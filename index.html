@@ -23,7 +23,7 @@
 }
 
 function changepic() {
-  var src = ($("#my_image").attr("src") === "/img/first.jpg") ? "/img/second.jpg" : "/img/second.jpg";
+  var src = ($("#my_image").attr("src") == "/img/first.jpg") ? "/img/second.jpg" : "/img/first.jpg";
   alert( src );
   $("#my_image").attr("src", src);
 }</script>
