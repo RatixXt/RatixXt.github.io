@@ -9,10 +9,11 @@
   <body>
     <!--Основное содержимое страницы-->
     <p>Тестовая страница</p>
+    <img id="my_image" src="/img/first.jpg"/>
+    <p>Описание - <div id="text"></div></p>
+    <input value="Нажми меня" onclick="changepic()" type="button"/>
   </body>
-</html>
-
-<script
+  <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous">
@@ -37,8 +38,5 @@ function changepic() {
   }
   $("#my_image").attr("src", src);
 }</script>
-<img id="my_image" src="/img/first.jpg"/>
+</html>
 
-<p>Описание - <div id="text"></div></p>
-
-<input value="Нажми меня" onclick="changepic()" type="button"/>
