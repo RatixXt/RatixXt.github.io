@@ -20,9 +20,11 @@
 
 <img id="my_image" src="/img/first.jpg"/>
 
-$("img").bind("click", function() {
+<script>
+  $("img").bind("click", function() {
       var src = ($(this).attr("src") === "/img/img1_on.jpg")
                     ? "/img/first.jpg" 
                     : "/img/second.jpg";
       $(this).attr("src", src);
 });
+</script>
