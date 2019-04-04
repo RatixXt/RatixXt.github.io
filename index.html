@@ -19,19 +19,26 @@
 </script> 
 <!-- <script type="text/javascript" src="main.js"></script> -->
 <script>
-  var text1="Собачка1";
-  var text2="Собачка2";
+  var text = "Собачка1";
+  document.getElementById("text").innerHTML = text;
   function showMessage() {
   alert( 'Привет всем присутствующим!' );
 }
 
 function changepic() {
-  var src = ($("#my_image").attr("src") == "/img/first.jpg") ? "/img/second.jpg" : "/img/first.jpg";
-  alert( src );
+  if ($("#my_image").attr("src") == "/img/first.jpg") {
+    var src = "/img/second.jpg";
+    text = "Собачка2";
+  }
+  else
+  {
+    var src = "/img/first.jpg";
+    text = "Собачка1";
+  }
   $("#my_image").attr("src", src);
 }</script>
 <img id="my_image" src="/img/first.jpg"/>
 
-<p>text1</p>
+<p><div id="text"></div></p>
 
 <input value="Нажми меня" onclick="changepic()" type="button"/>
