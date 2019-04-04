@@ -17,8 +17,16 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous">
 </script> 
-<script type="text/javascript" src="main.js"></script>
+<!-- <script type="text/javascript" src="main.js"></script> -->
+<script>function showMessage() {
+  alert( 'Привет всем присутствующим!' );
+}
 
+function changepic() {
+  var src = ($("#my_image").attr("src") === "/img/first.jpg") ? "/img/first.jpg" : "/img/second.jpg";
+  alert( src );
+  $("#my_image").attr("src", src);
+}</script>
 <img id="my_image" src="/img/first.jpg"/>
 
 <input value="Нажми меня" onclick="changepic()" type="button"/>
