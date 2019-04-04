@@ -3,6 +3,8 @@
   <!-- тег самого верхнего уровня, включается в себя весь HTML документ -->
   <head>
     <!-- теги ниже не отображаются, но содержат много важных настроек и мета-информации -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"/>
+    <script type="text/javascript" src="main.js"/>  
     <meta charset="utf-8">
     <title>Собачки</title>
   </head>
@@ -13,25 +15,5 @@
     <p id="text">Собачка1</p>
     <input value="Нажми меня" onclick="changepic()" type="button"/>
   </body>
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous">
-</script> 
-<!-- <script type="text/javascript" src="main.js"></script> -->
-<script>
-function changepic() {
-  if ($("#my_image").attr("src") == "/img/first.jpg") {
-    var src = "/img/second.jpg";
-    $("#text").text("Cобачка2");
-  }
-  else
-  {
-    var src = "/img/first.jpg";
-    $("#text").text("Cобачка1");
-  }
-  $("#my_image").attr("src", src);
-}</script>
-  
 </html>
 
