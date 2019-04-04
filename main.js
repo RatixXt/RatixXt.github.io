@@ -4,5 +4,6 @@ function showMessage() {
 
 function changepic() {
   var src = ($("#my_image").attr("src") === "/img/first.jpg") ? "/img/first.jpg" : "/img/second.jpg";
+  alert( src );
   $("#my_image").attr("src", src);
 }
