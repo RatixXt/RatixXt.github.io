@@ -39,9 +39,9 @@
     <form id="cat" method="POST" action="http://webcat/gocat">
       <input type="hidden" name="qwe" value="Савченко">
       <input type="submit" value="Юзануть кота!">
-    </form> 
-  
-<script>
+    </form>
+  </body>
+  <script>
         $('#cat').submit(function(e) {
           var $form = $(this);
           $.ajax({
@@ -53,8 +53,6 @@
           e.preventDefault(); 
         });
   </script>
-
-  </body>
   <!-- <script>document.getElementById('lesson2').submit(); </script>  Для автоматизации submit-->
 </html>
 
