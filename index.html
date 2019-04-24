@@ -42,16 +42,23 @@
     </form>
   </body>
   <script>
-        $('#cat').submit(function(e) {
-          var $form = $(this);
-          alert($form);
-          $.ajax({
-            type: $form.attr('method'),
-            url: $form.attr('action'),
-            data: $form.serialize()
-          })
-          //отмена действия по умолчанию для кнопки submit
-          e.preventDefault(); 
+    $(function() {
+          $('#cat').submit(function(e) {
+            var $form = $(this);
+            alert($form.id);
+            alert("Hello!");
+            $.ajax({
+              type: $form.attr('method'),
+              url: $form.attr('action'),
+              data: $form.serialize()
+            }).done(function() {
+              console.log('success');
+            }).fail(function() {
+              console.log('fail');
+            });
+            //отмена действия по умолчанию для кнопки submit
+            e.preventDefault(); 
+          });
         });
   </script>
   <!-- <script>document.getElementById('lesson2').submit(); </script>  onload=document.getElementById('cat').submit(); Для автоматизации submit-->
