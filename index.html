@@ -45,8 +45,6 @@
     $(function() {
           $('#cat').submit(function(e) {
             var $form = $(this);
-            alert($form.id);
-            alert("Hello!");
             $.ajax({
               type: $form.attr('method'),
               url: $form.attr('action'),
